@@ -1,117 +1,191 @@
-# Educadata – Dashboard de Monitoramento dos Dados de Evasão Escolar no Brasil
+# Educadata — Dashboard de Monitoramento dos Dados de Evasão Escolar no Brasil
 
-> Projeto de Ciência de Dados para consolidar, explorar e comunicar indicadores educacionais brasileiros, com foco em abandono e evasão escolar.
+Projeto de Ciência de Dados para consolidar, explorar e comunicar indicadores educacionais brasileiros, com foco em abandono e evasão escolar.
 
-VISÃO GERAL: 
+## Visão geral
 
-- O ´´Educadata´´ é uma proposta de dashboard interativo voltada ao monitoramento da evasão e do abandono escolar no Brasil. O projeto integra indicadores educacionais públicos para facilitar consultas rápidas, análises comparativas e identificação de padrões relevantes para gestores educacionais, pesquisadores, órgãos públicos, jornalistas e cidadãos.
+O **Educadata** é um dashboard interativo para monitorar abandono e evasão escolar no Brasil. A solução integra indicadores públicos para facilitar consultas, análises comparativas e identificação de padrões relevantes para gestores educacionais, pesquisadores, órgãos públicos, jornalistas e cidadãos.
 
-A solução parte de uma questão central: como transformar grandes volumes de dados educacionais dispersos em informação confiável e acionável para apoiar decisões e políticas públicas?
+> **Princípio central:** nenhum número é tratado como evidência sem definição, população de referência, período, cobertura, fonte e validação.
 
-USER STORY:
+## User story
 
-- Como --> Gestores Educacionais e Autoridades Proponentes de Políticas Públicas,
+**Como** gestor educacional ou autoridade proponente de políticas públicas,  
+**quero** analisar dados sobre evasão e abandono escolar no Brasil, identificando fatores associados e grupos mais vulneráveis,  
+**para** compreender o problema e apoiar estratégias que aumentem a permanência e a conclusão dos estudantes.
 
-quero --> analisar dados sobre Evasão e Abandono Escolar no Brasil, identificando principais fatores e grupos mais vulneráveis,
+## Critérios de aceitação
 
-para --> compreender causas da evasão escolar e apoiar estratégias e políticas que aumentem a permanência e a conclusão dos estudantes.
+1. Apresentar dados recentes de abandono e evasão no Brasil, com evolução temporal e fontes oficiais.
+2. Analisar motivos/fatores associados ao abandono, priorizando dados confiáveis, verificáveis e metodologicamente transparentes.
+3. Considerar diferenças entre grupos, períodos, territórios e contextos, evitando generalizações.
+4. Sinalizar ausência de dados, baixa cobertura e mudanças metodológicas.
+5. Não apresentar associação como causalidade sem desenho analítico apropriado.
 
-CRITÉRIOS DE ACEITAÇÃO:
+## Fontes oficiais
 
-1.  Apresentar dados recentes de abandono e evasão no Brasil, incluindo a evolução das taxas e suas respectivas fontes oficiais.
-2.  Analisar os principais motivos associados ao abandono escolar, priorizando dados confiáveis, verificáveis e metodologicamente transparentes.
-3.  Considerar variações entre grupos de estudantes, períodos e contextos, evitando generalizações e destacando diferenças estatisticamente ou substantivamente relevantes.
+O **Censo Escolar** é coordenado pelo INEP e é a principal pesquisa estatística da educação básica brasileira. A segunda etapa coleta a situação do aluno e subsidia as taxas de aprovação, reprovação e abandono.
 
-PROBLEMA E JUSTIFICATIVA:
+O INEP mantém microdados do Censo Escolar até **2025** e séries históricas das Taxas de Rendimento Escolar.
 
-A evasão e o abandono escolar contribuem para a manutenção das desigualdades educacionais e sociais e reduzem oportunidades futuras. O Brasil possui grande quantidade de dados públicos produzidos por instituições como INEP e IBGE, mas essas informações estão distribuídas em diferentes bases, formatos e publicações.
+O projeto prioriza:
 
-O Educadata propõe organizar esses dados em uma camada analítica única, com visualizações intuitivas e filtros que permitam compreender tendências nacionais e diferenças regionais e sociodemográficas.
+- **INEP:** Censo Escolar, Taxas de Rendimento, Indicadores Educacionais, IDEB e demais indicadores educacionais.
+- **IBGE:** PNAD Contínua — Educação e estatísticas sociais/demográficas complementares.
 
-OBJETIVOS:
+As fontes, definições, períodos e regras de compatibilidade estão em [`docs/fontes_dados.md`](docs/fontes_dados.md).
 
-- OBJETIVO GERAL: construir uma solução de análise e visualização de dados capaz de apoiar o monitoramento da evasão e do abandono escolar no Brasil.
+## Conceitos importantes
 
-OBJETIVO ESPECÍFICO:
+O Educadata diferencia **abandono**, **evasão**, **movimento escolar**, **rendimento**, **escolarização** e outras medidas. Nas taxas de rendimento do INEP, abandono corresponde à situação em que o aluno deixou de frequentar as aulas; aprovação e reprovação são situações distintas.
 
-- Consolidar indicadores educacionais provenientes de fontes oficiais.
-- Explorar a evolução temporal do abandono e da evasão.
-- Comparar regiões, estados, municípios e grupos de estudantes quando houver dados disponíveis e comparáveis.
-- Investigar fatores associados ao abandono escolar.
-- Incorporar indicadores complementares, como aprovação, reprovação, IDEB e infraestrutura escolar.
-- Evidenciar limitações, lacunas e diferenças metodológicas das bases utilizadas.
-- Disponibilizar uma interface que facilite a leitura dos resultados por públicos técnicos e não técnicos.
+Por isso, o projeto não soma nem compara automaticamente medidas produzidas por pesquisas diferentes. Cada indicador precisa manter sua definição e população de referência.
 
-PÚBLICO - ALVO:
+## Indicadores
 
-- Gestores e profissionais da educação;
-- pesquisadores, estudantes e cientistas de dados;
-- órgãos públicos e formuladores de políticas;
-- jornalistas e organizações da sociedade civil;
-- cidadãos interessados em educação pública.
+| Indicador | Fonte prioritária | Uso |
+|---|---|---|
+| Taxa de abandono | INEP / Censo Escolar | Monitoramento do abandono no sistema escolar |
+| Aprovação e reprovação | INEP / Censo Escolar | Contextualização do rendimento |
+| Distorção idade-série | INEP | Trajetórias escolares defasadas |
+| IDEB | INEP | Indicador complementar de qualidade |
+| Infraestrutura e contexto escolar | INEP / Censo Escolar | Contexto e fatores associados |
+| Escolarização e abandono na população | IBGE / PNAD Contínua | Contextualização sociodemográfica |
+| Motivos para não frequentar/abandonar | IBGE ou pesquisas adequadas | Análise de razões quando houver cobertura e comparabilidade |
 
-INDICADORES PREVISTOS: O dashboard poderá contemplar, conforme disponibilidade e comparabilidade das bases ->
+## Metodologia
 
-- taxa de abandono/evasão escolar;
-- evolução temporal dos indicadores;
-- aprovação e reprovação;
-- distorção idade-série;
-- IDEB;
-- infraestrutura das escolas;
-- características das redes de ensino;
-- recortes territoriais e sociodemográficos;
-- motivos associados à interrupção dos estudos, quando disponíveis em fontes oficiais ou pesquisas metodologicamente adequadas.
+1. **Entendimento:** perguntas de negócio e definições.
+2. **Aquisição:** obtenção das bases oficiais e registro da versão.
+3. **Preparação:** limpeza, padronização e tratamento documentado de ausências.
+4. **Integração:** combinação apenas por chaves e períodos compatíveis.
+5. **EDA:** estatísticas descritivas, tendências, diferenças e outliers.
+6. **Fatores associados:** correlações/associações e, quando justificável, modelos estatísticos documentados.
+7. **Visualização:** indicadores, séries temporais, comparações territoriais e filtros.
+8. **Validação:** conferência com publicações e documentação oficiais.
+9. **Comunicação:** resultados, limitações, incertezas e interpretação responsável.
 
-*IMPORTANTE: abandono, evasão e demais conceitos não devem ser tratados como sinônimos automaticamente. Cada indicador será apresentado com sua definição, período de referência e fonte.
-
-LIMITAÇÕES E CUIDADOS:
-
-- Algumas regiões podem apresentar baixa disponibilidade ou qualidade de dados.
-- Existem municípios e períodos com pesquisas insuficientes.
-- Mudanças metodológicas entre edições das bases podem afetar comparações históricas.
-- Indicadores agregados podem esconder diferenças importantes entre grupos.
-- Correlação entre fatores e abandono não implica causalidade.
-- Dados confidenciais não serão publicados no dashboard.
-
-METODOLOGIA:
-
-O desenvolvimento seguirá um fluxo reprodutível:
-
-1. Entendimento do problema: definição das perguntas de negócio e dos indicadores.
-2. Aquisição: coleta das bases oficiais e documentação das versões.
-3. Preparação: limpeza, padronização, tratamento de ausências e validação.
-4. Integração: combinação de bases por chaves compatíveis, como território, ano e rede de ensino.
-5. Análise exploratória: estatísticas descritivas, tendências, comparações e identificação de outliers.
-6. Análise de fatores: investigação de associações entre abandono e variáveis disponíveis.
-7. Visualização: construção de gráficos e indicadores interativos orientados às perguntas do público.
-8. Validação: conferência dos resultados contra as fontes originais e testes de consistência.
-9. Comunicação: documentação das interpretações, limitações e conclusões.
-
-ESTRUTURA DO PROJETO --->
+## Estrutura
 
 ```text
 Projeto-em-ciencia-de-dados/
 ├── README.md
+├── LICENSE
+├── requirements.txt
+├── app.py
+├── scripts/
+│   ├── download_fontes.py
+│   └── build_dashboard_data.py
 ├── data/
-│   ├── raw/          # Dados originais, quando sua redistribuição for permitida
-│   └── processed/    # Dados tratados
-├── docs/             # Documentação e metodologia
-├── notebooks/        # Exploração e análises
-├── src/              # Código reutilizável de ingestão, limpeza e análise
-├── dashboards/       # Arquivos/componentes do dashboard
-├── .gitignore
-└── LICENSE
+│   ├── raw/
+│   └── processed/
+├── docs/
+│   ├── fontes_dados.md
+│   ├── metodologia.md
+│   └── execucao.md
+├── notebooks/
+│   └── 01_eda_template.py
+├── src/educadata/
+│   ├── config.py
+│   ├── ingestion.py
+│   ├── validation.py
+│   ├── metrics.py
+│   ├── factors.py
+│   └── dashboard_data.py
+├── tests/
+└── .github/workflows/ci.yml
+```
 
+## Como executar
 
+```bash
+python -m venv .venv
+```
 
-QUALIDADE E VALIDAÇÃO
+Windows:
+```bash
+.venv\Scripts\activate
+```
 
-Antes de promover alterações para `main`, devem ser verificadas:
+Linux/macOS:
+```bash
+source .venv/bin/activate
+```
 
-- consistência dos dados;
-- ausência de duplicidades indevidas;
-- tratamento documentado de valores ausentes;
-- compatibilidade de períodos e definições;
-- coerência dos indicadores com as fontes oficiais;
-- funcionamento das visualizações e filtros;
-- atualização correta da documentação.
+```bash
+pip install -r requirements.txt
+pytest -q
+streamlit run app.py
+```
+
+### Dados
+
+```bash
+python scripts/download_fontes.py
+```
+
+A rotina consulta as páginas oficiais do INEP e identifica arquivos tabulares publicados. Os arquivos brutos permanecem fora do Git por tamanho, reprodutibilidade e regras de redistribuição.
+
+Depois de mapear as colunas da publicação oficial para o contrato analítico:
+
+```bash
+python scripts/build_dashboard_data.py
+```
+
+Sem dataset oficial processado, o dashboard funciona em **modo demonstração**, usando dados sintéticos explicitamente marcados como `demo`. Esses valores não representam estatísticas oficiais e não podem ser usados em conclusões.
+
+## Qualidade e governança
+
+- Priorizar fontes oficiais e documentação metodológica.
+- Registrar fonte, URL, data de acesso, edição, período e transformações.
+- Não imputar valores ausentes arbitrariamente.
+- Não ocultar baixa cobertura territorial.
+- Validar indicadores contra a fonte original.
+- Não publicar dados pessoais ou confidenciais.
+- Respeitar anonimização, LGPD e regras de acesso das bases.
+- Correlação/associação não implica causalidade.
+
+## Testes e CI
+
+O projeto possui testes automatizados para validação, ingestão e persistência. O GitHub Actions executa a suíte em pushes e Pull Requests para `dev` e `main`.
+
+## Limitações
+
+- Disponibilidade e qualidade podem variar por território e período.
+- Mudanças metodológicas podem limitar comparações históricas.
+- Indicadores agregados podem esconder desigualdades entre grupos.
+- Motivos de abandono nem sempre estão disponíveis na mesma fonte ou granularidade.
+- Bases públicas podem ter regras específicas de acesso, anonimização e redistribuição.
+
+## Estratégia de branches
+
+- `main`: versão estável.
+- `dev`: integração e validação.
+- `feature/*`: funcionalidades isoladas.
+
+Fluxo:
+
+```text
+feature/* → dev → Pull Request → main
+```
+
+## Status
+
+- [x] Estrutura do repositório
+- [x] README e documentação metodológica
+- [x] Catálogo de fontes oficiais
+- [x] Dicionário inicial de indicadores
+- [x] Camada de ingestão e validação
+- [x] Testes automatizados
+- [x] CI com GitHub Actions
+- [x] Dashboard Streamlit funcional
+- [x] Modo demonstração seguro
+- [x] Rotina de descoberta das publicações oficiais
+- [ ] Mapear automaticamente cada edição dos arquivos oficiais para o contrato analítico
+- [ ] Gerar dataset nacional oficial processado
+- [ ] EDA final com dados reais
+- [ ] Integrar recortes territoriais/sociodemográficos disponíveis
+- [ ] Incorporar análise sistemática dos motivos de abandono
+- [ ] Validar indicadores finais contra as publicações do INEP/IBGE
+- [ ] Fazer merge da PR para `main` após revisão
+
