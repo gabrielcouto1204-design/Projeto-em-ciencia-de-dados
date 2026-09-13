@@ -8,7 +8,7 @@
 - Quais fatores estão associados ao abandono nas bases disponíveis?
 - Como aprovação, reprovação, IDEB e infraestrutura se relacionam com os indicadores analisados?
 
-## Princípios
+## Os Princípios
 
 - Priorizar fontes oficiais e documentação metodológica.
 - Registrar ano, unidade territorial, população de referência e definição de cada indicador.
