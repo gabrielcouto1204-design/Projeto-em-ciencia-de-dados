@@ -35,7 +35,7 @@ Indicador complementar para identificar situações em que a idade do estudante 
 
 Indicador complementar de qualidade que combina desempenho em avaliação padronizada e rendimento escolar. Não deve ser interpretado como medida direta de evasão.
 
-### Abandono na população
+### Abandono na pop
 
 Medida proveniente de pesquisas domiciliares, como a PNAD Contínua, com população de referência própria. Deve permanecer separada dos indicadores administrativos do Censo Escolar.
 
