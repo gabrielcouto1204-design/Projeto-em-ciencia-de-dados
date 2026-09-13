@@ -18,9 +18,9 @@ para --> compreender causas da evasão escolar e apoiar estratégias e política
 
 CRITÉRIOS DE ACEITAÇÃO:
 
-1. Apresentar dados recentes de abandono e evasão no Brasil, incluindo a evolução das taxas e suas respectivas fontes oficiais.
-2. Analisar os principais motivos associados ao abandono escolar, priorizando dados confiáveis, verificáveis e metodologicamente transparentes.
-3. Considerar variações entre grupos de estudantes, períodos e contextos, evitando generalizações e destacando diferenças estatisticamente ou substantivamente relevantes.
+1.  Apresentar dados recentes de abandono e evasão no Brasil, incluindo a evolução das taxas e suas respectivas fontes oficiais.
+2.  Analisar os principais motivos associados ao abandono escolar, priorizando dados confiáveis, verificáveis e metodologicamente transparentes.
+3.  Considerar variações entre grupos de estudantes, períodos e contextos, evitando generalizações e destacando diferenças estatisticamente ou substantivamente relevantes.
 
 PROBLEMA E JUSTIFICATIVA:
 
