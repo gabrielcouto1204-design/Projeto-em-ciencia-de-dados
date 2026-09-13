@@ -189,6 +189,3 @@ feature/* → dev → Pull Request → main
 - [ ] Validar indicadores finais contra as publicações do INEP/IBGE
 - [ ] Fazer merge da PR para `main` após revisão
 
-## Licença
-
-Código do projeto sob **MIT License**. Bases oficiais permanecem sujeitas às respectivas condições de uso, licenças, anonimização e regras de redistribuição.
