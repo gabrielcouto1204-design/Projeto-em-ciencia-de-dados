@@ -117,39 +117,37 @@ O desenvolvimento seguirá um fluxo reprodutível:
 ```text
 Projeto-em-ciencia-de-dados/
 ├── README.md
+├── app.py
+├── requirements.txt
 ├── data/
 │   ├── raw/          # Dados originais, quando sua redistribuição for permitida
 │   └── processed/    # Dados tratados
 ├── docs/             # Documentação e metodologia
 ├── notebooks/        # Exploração e análises
-├── src/              # Código reutilizável de ingestão, limpeza e análise
-├── dashboards/       # Arquivos/componentes do dashboard
-├── .gitignore
-└── LICENSE
+├── src/
+│   └── educadata/    # Código reutilizável de ingestão, limpeza e análise
+├── tests/            # Testes automatizados
+├── dashboards/       # Componentes e documentação do dashboard
+└── .gitignore
 ```
 
-## 🛠️ Tecnologias sugeridas
+## 🛠️ Tecnologias
 
 - Python 3.11+
-- pandas e NumPy para manipulação de dados
-- Matplotlib/Plotly para visualização
+- pandas e NumPy para manipulação e métricas
+- Plotly para visualizações interativas
+- Streamlit para o dashboard
+- pytest para testes
 - Jupyter para exploração e documentação analítica
-- Streamlit ou ferramenta equivalente para o dashboard interativo
 - Git e GitHub para versionamento e colaboração
 
-As tecnologias podem ser ajustadas durante a implementação conforme os requisitos do produto.
-
 ## ▶️ Como executar
-
-A estrutura inicial foi preparada para receber a implementação do pipeline. Após a definição das dependências, recomenda-se:
 
 ```bash
 git clone <URL_DO_REPOSITORIO>
 cd Projeto-em-ciencia-de-dados
 python -m venv .venv
 ```
-
-Ativação do ambiente:
 
 **Windows**
 ```bash
@@ -161,15 +159,25 @@ Ativação do ambiente:
 source .venv/bin/activate
 ```
 
-Instalação das dependências, quando o arquivo for disponibilizado:
+Instale as dependências:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## 🌿 Estratégia de branches
+Execute o dashboard:
 
-O projeto utiliza duas branches principais:
+```bash
+streamlit run app.py
+```
+
+Execute os testes:
+
+```bash
+pytest
+```
+
+## 🌿 Estratégia de branches
 
 - `main`: versão estável, destinada às entregas consolidadas.
 - `dev`: desenvolvimento, integração e validação das novas funcionalidades.
@@ -180,25 +188,9 @@ Fluxo recomendado:
 feature/* → dev → Pull Request → main
 ```
 
-Commits devem ser pequenos, descritivos e relacionados a uma alteração lógica. A branch `dev` será utilizada para desenvolvimento e integração antes da abertura de Pull Requests para `main`.
-
 ## 🧪 Qualidade e validação
 
-Antes de promover alterações para `main`, devem ser verificadas:
-
-- consistência dos dados;
-- ausência de duplicidades indevidas;
-- tratamento documentado de valores ausentes;
-- compatibilidade de períodos e definições;
-- coerência dos indicadores com as fontes oficiais;
-- funcionamento das visualizações e filtros;
-- atualização correta da documentação.
-
-## 📈 Resultado esperado
-
-Espera-se que o Educadata permita visualizar rapidamente **onde**, **quando** e **para quais grupos** os indicadores de abandono apresentam maior relevância, sem perder de vista as limitações dos dados.
-
-O produto final deve transformar dados públicos dispersos em evidências compreensíveis para apoiar pesquisa, monitoramento e formulação de políticas educacionais baseadas em dados.
+Antes de promover alterações para `main`, verificar consistência, duplicidades, valores ausentes, compatibilidade de períodos e definições, coerência com as fontes oficiais, funcionamento das visualizações e atualização da documentação.
 
 ## 📚 Referências institucionais
 
@@ -208,12 +200,7 @@ O produto final deve transformar dados públicos dispersos em evidências compre
 
 ## 🤝 Contribuição
 
-1. Crie ou atualize uma branch de desenvolvimento.
-2. Faça alterações pequenas e documentadas.
-3. Valide os resultados localmente.
-4. Registre um commit com mensagem clara.
-5. Envie as alterações para `dev`.
-6. Abra um Pull Request de `dev` para `main` quando a entrega estiver pronta para revisão.
+Faça alterações pequenas e documentadas em `dev`, valide os resultados, registre commits claros e abra Pull Requests para `main` quando a entrega estiver pronta para revisão.
 
 ## 📄 Licença
 
