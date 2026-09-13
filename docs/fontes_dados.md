@@ -2,32 +2,34 @@
 
 Este catálogo registra as fontes oficiais priorizadas e o papel de cada uma no Educadata.
 
-| Instituição | Base/indicador | Referência atual disponível | Uso no projeto | Status |
+| Instituição | Base/indicador | Referência atual | Uso no projeto | Status |
 |---|---|---|---|---|
-| INEP | Taxas de rendimento escolar | 2024; página oficial também disponibiliza séries históricas e atualização de 2025 | abandono, aprovação e reprovação | Fonte prioritária |
-| INEP | Indicadores Educacionais | 2024/2025 conforme indicador | distorção idade-série, infraestrutura/contexto e outros indicadores | Fonte prioritária |
-| INEP | Censo Escolar – resultados | 2025 e séries históricas | contexto escolar e validação dos indicadores | Fonte prioritária |
-| INEP | IDEB | ciclo 2023 e séries anteriores | indicador complementar de qualidade | Fonte prioritária |
-| IBGE | PNAD Contínua – Educação | 2024 | abandono de 14 a 29 anos, escolarização e recortes sociodemográficos | Fonte prioritária |
+| INEP | Taxas de Rendimento Escolar | Séries históricas disponíveis até 2025 | abandono, aprovação e reprovação | Prioritária |
+| INEP | Censo Escolar | Microdados até 2025 | contexto escolar, matrícula, movimento e rendimento | Prioritária |
+| INEP | Indicadores Educacionais | Séries conforme o indicador | distorção idade-série e indicadores complementares | Prioritária |
+| INEP | IDEB | Séries históricas conforme ciclo | indicador complementar de qualidade | Prioritária |
+| IBGE | PNAD Contínua – Educação | 2024 para o recorte de abandono usado nesta etapa | abandono, escolarização e recortes sociodemográficos | Prioritária |
 
 ## Referências oficiais
 
+- INEP — Censo Escolar: https://www.gov.br/inep/pt-br/areas-de-atuacao/pesquisas-estatisticas-e-indicadores/censo-escolar
+- INEP — Microdados do Censo Escolar: https://www.gov.br/inep/pt-br/acesso-a-informacao/dados-abertos/microdados/censo-escolar
 - INEP — Indicadores Educacionais: https://www.gov.br/inep/pt-br/acesso-a-informacao/dados-abertos/indicadores-educacionais
 - INEP — Taxas de Rendimento Escolar: https://www.gov.br/inep/pt-br/acesso-a-informacao/dados-abertos/indicadores-educacionais/taxas-de-rendimento-escolar
-- INEP — Resultados do Censo Escolar: https://www.gov.br/inep/pt-br/areas-de-atuacao/pesquisas-estatisticas-e-indicadores/censo-escolar/resultados
-- INEP — Sinopses Estatísticas da Educação Básica: https://www.gov.br/inep/pt-br/acesso-a-informacao/dados-abertos/sinopses-estatisticas/educacao-basica
-- IBGE — PNAD Contínua: https://www.ibge.gov.br/estatisticas/sociais/populacao/17270-pnad-
+- IBGE — PNAD Contínua: https://www.ibge.gov.br/estatisticas/sociais/populacao/17270-pnad-continua.html
 
-## Por que combinar INEP e IBGE?
+## Papel de cada fonte
 
-O INEP é a fonte principal para indicadores derivados do sistema escolar, enquanto a PNAD Contínua do IBGE permite observar a condição de estudo e o abandono a partir da população, inclusive com recortes sociodemográficos. Essas medidas não devem ser somadas ou tratadas como equivalentes: o dashboard exibirá a definição, população, período e fonte de cada indicador.
+O **INEP** é a referência principal para indicadores derivados do sistema escolar. A segunda etapa do Censo Escolar coleta movimento e rendimento ao final do ano letivo e subsidia o cálculo das taxas de aprovação, reprovação e abandono. O **IBGE** complementa a análise com medidas da população, permitindo recortes sociodemográficos e uma perspectiva diferente do fenômeno.
+
+Essas medidas não devem ser somadas ou tratadas como equivalentes. O dashboard deverá exibir definição, população de referência, período e fonte de cada indicador.
 
 ## Critérios de inclusão
 
 Uma fonte só entra na camada analítica após verificar:
 
 1. autoria institucional e origem oficial;
-2. documentação/metodologia disponível;
+2. documentação e metodologia disponíveis;
 3. período de referência;
 4. definição das variáveis;
 5. cobertura territorial e populacional;
@@ -37,4 +39,18 @@ Uma fonte só entra na camada analítica após verificar:
 
 ## Rastreabilidade
 
-Cada conjunto processado deve preservar a referência da fonte original, data de acesso e transformações aplicadas. Quando uma base não puder ser redistribuída, o repositório deve conter apenas scripts, metadados e instruções para obtenção legítima.
+Para cada conjunto processado, registrar:
+
+- instituição e nome da base;
+- URL oficial;
+- ano/período de referência;
+- data de acesso;
+- versão ou arquivo utilizado;
+- transformações aplicadas;
+- limitações conhecidas.
+
+Quando uma base não puder ser redistribuída, o repositório deve conter somente scripts, metadados e instruções para obtenção legítima.
+
+## Observação metodológica atualizada
+
+O Inep informa que a Situação do Aluno reúne informações de rendimento e movimento e é utilizada no cálculo das taxas de rendimento e do Ideb. Para o exercício de 2027, uma nota técnica de 2026 propõe um indicador de atendimento baseado na permanência do estudante entre 2024 e 2025. Esse indicador não deve ser confundido automaticamente com a taxa de abandono tradicional; o Educadata manterá as definições separadas.
