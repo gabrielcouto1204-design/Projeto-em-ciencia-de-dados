@@ -27,13 +27,19 @@ def read_table(path: str | Path, **kwargs) -> pd.DataFrame:
 def normalize_column_names(df: pd.DataFrame) -> pd.DataFrame:
     """Padroniza nomes de colunas sem alterar os valores das observações."""
     result = df.copy()
-    result.columns = (
-        result.columns.astype(str)
-        .str.strip()
-        .str.lower()
-        .str.replace(r"[^a-z0-9]+", "_", regex=True)
-        .str.strip("_")
-    )
+    normalized = []
+    for column in result.columns.astype(str):
+        name = column.strip().lower()
+        # Preserve letras acentuadas durante a normalização para que palavras
+        # como "município" não sejam quebradas de forma incorreta.
+        name = "".join(
+            char if (char.isalnum() or char == "_") else "_"
+            for char in name
+        )
+        while "__" in name:
+            name = name.replace("__", "_")
+        normalized.append(name.strip("_"))
+    result.columns = normalized
     return result
 
 
