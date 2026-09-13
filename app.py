@@ -11,7 +11,7 @@ ROOT = Path(__file__).resolve().parent
 sys.path.insert(0, str(ROOT))
 from src.educadata.dashboard_data import load_indicator_data  # noqa: E402
 
-st.set_page_config(page_title="Educadata", page_icon="📊", layout="wide")
+st.set_page_config(page_title="Educadata", page_icon="", layout="wide")
 st.title("Educadata")
 st.caption("Dashboard de Monitoramento dos Dados de Evasão Escolar no Brasil")
 
