@@ -2,7 +2,7 @@
 
 > Projeto de Ciência de Dados para consolidar, explorar e comunicar indicadores educacionais brasileiros, com foco em abandono e evasão escolar.
 
-VISÃO GERAL
+* VISÃO GERAL
 
 O **Educadata** é uma proposta de dashboard interativo voltada ao monitoramento da evasão e do abandono escolar no Brasil. O projeto integra indicadores educacionais públicos para facilitar consultas rápidas, análises comparativas e identificação de padrões relevantes para gestores educacionais, pesquisadores, órgãos públicos, jornalistas e cidadãos.
 
@@ -16,25 +16,25 @@ quero --> analisar dados sobre Evasão e Abandono Escolar no Brasil, identifican
 
 para --> compreender causas da evasão escolar e apoiar estratégias e políticas que aumentem a permanência e a conclusão dos estudantes.
 
-CRITÉRIOS DE ACEITAÇÃO
+* CRITÉRIOS DE ACEITAÇÃO
 
 1. Apresentar dados recentes de abandono e evasão no Brasil, incluindo a evolução das taxas e suas respectivas fontes oficiais.
 2. Analisar os principais motivos associados ao abandono escolar, priorizando dados confiáveis, verificáveis e metodologicamente transparentes.
 3. Considerar variações entre grupos de estudantes, períodos e contextos, evitando generalizações e destacando diferenças estatisticamente ou substantivamente relevantes.
 
-PROBLEMA E JUSTIFICATIVA
+* PROBLEMA E JUSTIFICATIVA
 
 A evasão e o abandono escolar contribuem para a manutenção das desigualdades educacionais e sociais e reduzem oportunidades futuras. O Brasil possui grande quantidade de dados públicos produzidos por instituições como INEP e IBGE, mas essas informações estão distribuídas em diferentes bases, formatos e publicações.
 
 O Educadata propõe organizar esses dados em uma camada analítica única, com visualizações intuitivas e filtros que permitam compreender tendências nacionais e diferenças regionais e sociodemográficas.
 
-OBJETIVOS
+* OBJETIVOS
 
-OBJETIVO GERAL
+* OBJETIVO GERAL
 
 Construir uma solução de análise e visualização de dados capaz de apoiar o monitoramento da evasão e do abandono escolar no Brasil.
 
-OBJETIVO ESPECÍFICO
+* OBJETIVO ESPECÍFICO
 
 - Consolidar indicadores educacionais provenientes de fontes oficiais.
 - Explorar a evolução temporal do abandono e da evasão.
@@ -44,7 +44,7 @@ OBJETIVO ESPECÍFICO
 - Evidenciar limitações, lacunas e diferenças metodológicas das bases utilizadas.
 - Disponibilizar uma interface que facilite a leitura dos resultados por públicos técnicos e não técnicos.
 
-PÚBLICO - ALVO
+* PÚBLICO - ALVO
 
 - Gestores e profissionais da educação;
 - pesquisadores, estudantes e cientistas de dados;
@@ -52,7 +52,7 @@ PÚBLICO - ALVO
 - jornalistas e organizações da sociedade civil;
 - cidadãos interessados em educação pública.
 
-INDICADORES PREVISTOS
+* INDICADORES PREVISTOS
 
 O dashboard poderá contemplar, conforme disponibilidade e comparabilidade das bases:
 
@@ -68,7 +68,7 @@ O dashboard poderá contemplar, conforme disponibilidade e comparabilidade das b
 
 *IMPORTANTE: abandono, evasão e demais conceitos não devem ser tratados como sinônimos automaticamente. Cada indicador será apresentado com sua definição, período de referência e fonte.
 
-LIMITAÇÕES E CUIDADOS
+* LIMITAÇÕES E CUIDADOS
 
 - Algumas regiões podem apresentar baixa disponibilidade ou qualidade de dados.
 - Existem municípios e períodos com pesquisas insuficientes.
@@ -77,7 +77,7 @@ LIMITAÇÕES E CUIDADOS
 - Correlação entre fatores e abandono não implica causalidade.
 - Dados confidenciais não serão publicados no dashboard.
 
-METODOLOGIA
+* METODOLOGIA
 
 O desenvolvimento seguirá um fluxo reprodutível:
 
@@ -91,7 +91,7 @@ O desenvolvimento seguirá um fluxo reprodutível:
 8. Validação: conferência dos resultados contra as fontes originais e testes de consistência.
 9. Comunicação: documentação das interpretações, limitações e conclusões.
 
-ESTRUTURA DO PROJETO
+* ESTRUTURA DO PROJETO
 
 ```text
 Projeto-em-ciencia-de-dados/
