@@ -23,7 +23,7 @@ O dicionário define o contrato mínimo para qualquer indicador exibido pelo das
 
 Indicador de rendimento escolar produzido a partir das informações de movimento e rendimento do Censo Escolar. Deve ser armazenado com ano, etapa, rede e território para permitir comparações compatíveis.
 
-### Aprovação e reprovação
+### Aprovaçõees e Reprovações
 
 Indicadores de rendimento utilizados para contextualizar o abandono e compor análises de fluxo escolar.
 
