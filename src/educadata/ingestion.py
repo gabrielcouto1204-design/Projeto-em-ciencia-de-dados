@@ -1,6 +1,7 @@
 """Utilitários pequenos e testáveis para ingestão de dados oficiais."""
 
 from pathlib import Path
+import unicodedata
 
 import pandas as pd
 
@@ -30,8 +31,10 @@ def normalize_column_names(df: pd.DataFrame) -> pd.DataFrame:
     normalized = []
     for column in result.columns.astype(str):
         name = column.strip().lower()
-        # Preserve letras acentuadas durante a normalização para que palavras
-        # como "município" não sejam quebradas de forma incorreta.
+        # Remove acentos para produzir nomes de colunas estáveis e compatíveis
+        # com o padrão ASCII usado pelo projeto.
+        name = unicodedata.normalize("NFKD", name)
+        name = "".join(char for char in name if not unicodedata.combining(char))
         name = "".join(
             char if (char.isalnum() or char == "_") else "_"
             for char in name
