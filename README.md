@@ -4,7 +4,10 @@
 
 VISÃO GERAL: 
 
-- O ´´Educadata´´ é uma proposta de dashboard interativo voltada ao monitoramento da evasão e do abandono escolar no Brasil. O projeto integra indicadores educacionais públicos para facilitar consultas rápidas, análises comparativas e identificação de padrões relevantes para gestores educacionais, pesquisadores, órgãos públicos, jornalistas e cidadãos.
+ O ´´Educadata´´ é uma proposta de dashboard interativo voltada ao monitoramento da evasão e do abandono escolar no
+Brasil. A ideia do projeto é integrar indicadores educacionais públicos para facilitar consultas rápidas, análises
+comparativas e identificação de padrões relevantes para gestores educacionais, pesquisadores, órgãos públicos, jornalistas
+e cidadãos.
 
 A solução parte de uma questão central: como transformar grandes volumes de dados educacionais dispersos em informação confiável e acionável para apoiar decisões e políticas públicas?
 
@@ -34,8 +37,8 @@ OBJETIVOS:
 
 OBJETIVO ESPECÍFICO:
 
-- Consolidar indicadores educacionais provenientes de fontes oficiais.
-- Explorar a evolução temporal do abandono e da evasão.
+- Reunir indicadores educacionais provenientes de fontes oficiais.
+- Explorar a evolução temporal do abandono e da evasão escolar.
 - Comparar regiões, estados, municípios e grupos de estudantes quando houver dados disponíveis e comparáveis.
 - Investigar fatores associados ao abandono escolar.
 - Incorporar indicadores complementares, como aprovação, reprovação, IDEB e infraestrutura escolar.
@@ -44,12 +47,8 @@ OBJETIVO ESPECÍFICO:
 
 PÚBLICO - ALVO:
 
-- Gestores e profissionais da educação;
-- pesquisadores, estudantes e cientistas de dados;
-- órgãos públicos e formuladores de políticas;
-- jornalistas e organizações da sociedade civil;
-- cidadãos interessados em educação pública.
-
+  O projeto pode ser utilizado por gestores e profissionais da educação, pesquisadores, estudantes, órgãos públicos e outras pessoas interessadas no problema da evasão escolar.
+  
 INDICADORES PREVISTOS: O dashboard poderá contemplar, conforme disponibilidade e comparabilidade das bases ->
 
 - taxa de abandono/evasão escolar;
