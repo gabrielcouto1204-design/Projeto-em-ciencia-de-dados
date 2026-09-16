@@ -48,7 +48,14 @@ OBJETIVO ESPECÍFICO:
 PÚBLICO - ALVO:
 
   O projeto pode ser utilizado por gestores e profissionais da educação, pesquisadores, estudantes, órgãos públicos e outras pessoas interessadas no problema da evasão escolar.
-  
+
+TAXA DE EVASÃO
+
+Entre os dados levantados pelo grupo, está a informação de que, em 2023, cerca de 9,1 milhões de jovens de 15 a 29 anos
+haviam deixado a escola sem concluir a educação básica obrigatória. Em 2021, a população correspondente a essa idade no
+Brasil (15 a 29 anos) era de 50 milhões de pessoas, o que representa uma taxa de cerca de 18,2% de estudantes que deixaram
+a escola, seja por obrigação ou vontade própria.
+
 INDICADORES PREVISTOS: O dashboard poderá contemplar, conforme disponibilidade e comparabilidade das bases ->
 
 - taxa de abandono/evasão escolar;
